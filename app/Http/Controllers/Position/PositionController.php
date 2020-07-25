@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Position;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Position;
+use App\Model\Position\Position;
 class PositionController extends Controller
 {
     /**
@@ -59,7 +59,6 @@ class PositionController extends Controller
     public function show($id)
     {
         $position = Position::findOrFail($id);
-
         return response()->json(['data' => $position],200);
     }
 
@@ -71,7 +70,7 @@ class PositionController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\LevelEmployee;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\LevelEmployee;
+use App\Model\LevelEmployee\LevelEmployee;
 class LevelEmployeeController extends Controller
 {
     /**
@@ -87,8 +87,8 @@ class LevelEmployeeController extends Controller
 
         $rules = [];
         $this->validate($request,$rules);
-        if($request->has('level_emp')){
-            $levelemp->level_emp = $request->level_emp ;
+        if($request->has('levelemployee')){
+            $levelemp->levelemployee = $request->levelemployee ;
    
         }
 

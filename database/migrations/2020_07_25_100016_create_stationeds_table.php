@@ -14,7 +14,7 @@ class CreateStationedsTable extends Migration
     public function up()
     {
         Schema::create('stationeds', function (Blueprint $table) {
-            $table->bigIncrements('sta_id');
+            $table->bigIncrements('id');
             $table->string('stationed_name');
             $table->timestamps();
         });

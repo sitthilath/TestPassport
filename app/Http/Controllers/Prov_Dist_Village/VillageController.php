@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Prov_Dist_Village;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Village;
+use App\Model\Village\Village;
 class VillageController extends Controller
 {
     /**

@@ -1,18 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Model\Stationed;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Stationed extends Model
 {
-    protected $primaryKey = "sta_id";
+   
     protected $fillable=[
         'stationed_name',
     ];
 
     public function user()
     {
-        return $this->hasMany('App\User','u_id','sta_id');
+        return $this->hasMany('App\User');
     }
 }

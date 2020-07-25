@@ -14,37 +14,36 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('u_id');
+            $table->bigIncrements('id');
           
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-
-
+                
             
             $table->string('budget_company');
             $table->string('previous');
             $table->string('status');
-            $table->string('card_num_emp');
-            $table->string('name_surname');
-            $table->bigInteger('pos_id')->unsigned();
+            $table->string('card_number_employee');
+            $table->string('name');
+            $table->string('surname');
+            $table->bigInteger('position_id')->unsigned();
             $table->date('start_date');
-            $table->bigInteger('lev_id')->unsigned();
+            $table->bigInteger('levelemployee_id')->unsigned();
             $table->string('report_to');
-
             $table->string('line_report');
-            $table->bigInteger('ins_id')->unsigned();
-            $table->bigInteger('dep_id')->unsigned();
-            $table->bigInteger('sta_id')->unsigned();
-            $table->bigInteger('are_id')->unsigned();
+            $table->bigInteger('institution_id')->unsigned();
+            $table->bigInteger('department_id')->unsigned();
+            $table->bigInteger('stationed_id')->unsigned();
+            $table->bigInteger('area_id')->unsigned();
             $table->date('date_of_birth');
             $table->string('tel');
             $table->string('history_working');
             $table->string('edu_background');
             $table->string('company_guarantee');
-            $table->bigInteger('vill_id')->unsigned();
-            $table->bigInteger('dr_id')->unsigned();
-            $table->bigInteger('pr_id')->unsigned();
+            $table->bigInteger('village_id')->unsigned();
+            $table->bigInteger('district_id')->unsigned();
+            $table->bigInteger('province_id')->unsigned();
             $table->string('census');
             $table->string('penalty_notification');
             $table->string('certificate_residence');
@@ -52,10 +51,10 @@ class CreateUsersTable extends Migration
             
             $table->string('quick_contact_information');
             $table->string('basic_salary');
+            
             $table->string('eating_rate');
             $table->string('bonus');
             $table->string('phone_value');
-
             $table->string('annual_holiday');
             $table->string('appraisal_salary');
             $table->string('petrol_cost');
@@ -63,22 +62,24 @@ class CreateUsersTable extends Migration
             $table->string('diligent_money');
             $table->string('accommodation_fee');
             $table->string('probation');
-            $table->string('account_num');
+            $table->string('account_number');
             $table->string('annotation');
             
             $table->rememberToken();
             $table->timestamps();
+            
+            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
+            $table->foreign('levelemployee_id')->references('id')->on('level_employees')->onDelete('cascade');
+            $table->foreign('institution_id')->references('id')->on('institutions')->onDelete('cascade');
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('stationed_id')->references('id')->on('stationeds')->onDelete('cascade');
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+            $table->foreign('village_id')->references('id')->on('villages')->onDelete('cascade');
+            $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
+            $table->foreign('province_id')->references('id')->on('provinces')->onDelete('cascade');
+            
 
-
-            $table->foreign('pos_id')->references('pos_id')->on('positions')->onDelete('cascade');
-            $table->foreign('lev_id')->references('lev_id')->on('level_employees')->onDelete('cascade');
-            $table->foreign('ins_id')->references('ins_id')->on('institutions')->onDelete('cascade');
-            $table->foreign('dep_id')->references('dep_id')->on('departments')->onDelete('cascade');
-            $table->foreign('sta_id')->references('sta_id')->on('stationeds')->onDelete('cascade');
-            $table->foreign('are_id')->references('are_id')->on('areas')->onDelete('cascade');
-            $table->foreign('vill_id')->references('vill_id')->on('villages')->onDelete('cascade');
-            $table->foreign('dr_id')->references('dr_id')->on('districts')->onDelete('cascade');
-            $table->foreign('pr_id')->references('pr_id')->on('provinces')->onDelete('cascade');
+       
         });
     }
 

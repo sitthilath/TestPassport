@@ -1,18 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Model\Area;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Area extends Model
 {
-    protected $primaryKey = "are_id";
+   
     protected $fillable=[
         'area_name',
     ];
 
     public function user()
     {
-        return $this->hasMany('App\user','u_id','are_id');
+        return $this->hasMany('App\User');
     }
 }

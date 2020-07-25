@@ -14,13 +14,13 @@ class CreateDistrictsTable extends Migration
     public function up()
     {
         Schema::create('districts', function (Blueprint $table) {
-            $table->bigIncrements('dr_id');
-            $table->string('dr_name');
-            $table->string('dr_name_en');
-            $table->bigInteger('pr_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->string('district_name');
+            $table->string('district_name_en');
+            $table->bigInteger('province_id')->unsigned();
             $table->timestamps();
+            $table->foreign('province_id')->references('id')->on('provinces')->onDelete('cascade');
 
-            $table->foreign('pr_id')->references('pr_id')->on('provinces')->onDelete('cascade');
         });
     }
 

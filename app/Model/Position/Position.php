@@ -1,19 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Model\Position;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Position extends Model
 {
-    protected $primaryKey = "pos_id";
+    
     protected $fillable=[
         'position_name',
     ];
 
     public function user()
     {
-        return $this->hasMany('App\User','u_id','pos_id');
+        return $this->hasMany('App\User');
     }
 
 }

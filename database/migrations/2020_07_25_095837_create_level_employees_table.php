@@ -14,9 +14,12 @@ class CreateLevelEmployeesTable extends Migration
     public function up()
     {
         Schema::create('level_employees', function (Blueprint $table) {
-            $table->bigIncrements('lev_id');
-            $table->string('level_emp');
+            $table->bigIncrements('id');
+            $table->string('levelemployee');
             $table->timestamps();
+
+            
+
         });
     }
 

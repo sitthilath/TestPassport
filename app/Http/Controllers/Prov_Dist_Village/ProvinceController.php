@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Prov_Dist_Village;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Province;
+use App\Model\Province\Province;
 class ProvinceController extends Controller
 {
     /**

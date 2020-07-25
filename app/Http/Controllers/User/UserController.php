@@ -99,18 +99,22 @@ class UserController extends Controller
 
     }
 
-    if($request->has('card_num_emp')){
-        $user->card_num_emp = $request->card_num_emp ;
+    if($request->has('card_number_employee')){
+        $user->card_number_employee = $request->card_number_employee ;
 
     }
 
-    if($request->has('name_surname')){
-        $user->name_surname = $request->name_surname ;
+    if($request->has('name')){
+        $user->name = $request->name ;
+
+    }
+    if($request->has('surname')){
+        $user->surname = $request->surname ;
 
     }
 
-    if($request->has('pos_id')){
-        $user->pos_id = $request->pos_id ;
+    if($request->has('position_id')){
+        $user->position_id = $request->position_id ;
 
     }
 
@@ -119,8 +123,8 @@ class UserController extends Controller
 
     }
 
-    if($request->has('lev_id')){
-        $user->lev_id = $request->lev_id ;
+    if($request->has('levelemployee_id')){
+        $user->levelemployee_id = $request->levelemployee_id ;
 
     }
 
@@ -134,23 +138,23 @@ class UserController extends Controller
 
     }
 
-    if($request->has('ins_id')){
-        $user->ins_id = $request->ins_id ;
+    if($request->has('institution_id')){
+        $user->institution_id = $request->institution_id ;
 
     }
     
-    if($request->has('dep_id')){
-        $user->dep_id = $request->dep_id ;
+    if($request->has('department_id')){
+        $user->department_id = $request->department_id ;
 
     }
  
-    if($request->has('sta_id')){
-        $user->sta_id = $request->sta_id ;
+    if($request->has('stationed_id')){
+        $user->stationed_id = $request->stationed_id ;
 
     }
      
-    if($request->has('are_id')){
-        $user->are_id = $request->are_id ;
+    if($request->has('area_id')){
+        $user->area_id = $request->area_id ;
 
     }
      
@@ -180,18 +184,18 @@ class UserController extends Controller
 
     }
     
-    if($request->has('vill_id')){
-        $user->vill_id = $request->vill_id ;
+    if($request->has('village_id')){
+        $user->village_id = $request->village_id ;
 
     }
   
-    if($request->has('dr_id')){
-        $user->dr_id = $request->dr_id ;
+    if($request->has('district_id')){
+        $user->district_id = $request->district_id ;
 
     }
      
-    if($request->has('pr_id')){
-        $user->pr_id = $request->pr_id ;
+    if($request->has('province_id')){
+        $user->province_id = $request->province_id ;
 
     }
     
@@ -275,8 +279,8 @@ class UserController extends Controller
 
     }
 
-    if($request->has('account_num')){
-        $user->account_num = $request->account_num ;
+    if($request->has('account_number')){
+        $user->account_number = $request->account_number ;
 
     }
 

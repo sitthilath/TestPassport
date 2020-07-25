@@ -1,23 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Model\Province;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Province extends Model
 {
-    protected $primaryKey = "pr_id";
+    
     protected $fillable = [
-        'province'
+        'province_name'
     ];
 
     public function user()
     {
-        return $this->hasMany('App\User','u_id','pr_id');
+        return $this->hasMany('App\User');
     }
 
     public function district()
     {
-        return $this->hasMany('App\District','dr_id','pr_id');
+        return $this->hasMany('App\Model\District\District');
     }
 }

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
 
-    protected $primaryKey = "u_id";
+   
     
     protected $fillable = [
         'name', 'email', 'password',
@@ -24,26 +24,27 @@ class User extends Authenticatable
         'budget_company',
         'previous',
         'status',
-        'card_num_emp',
-        'name_surname',
-        'pos_id',
+        'card_number_employee',
+        'name',
+        'surname',
+        'position_id',
         'start_date',
-        'lev_id',
+        'levelemployee_id',
         'report_to',
 
         'line_report',
-        'ins_id',
-        'dep_id',
-        'sta_id',
-        'are_id',
+        'institution_id',
+        'department_id',
+        'stationed_id',
+        'area_id',
         'date_of_birth',
         'tel',
         'history_working',
         'edu_background',
         'company_guarantee',
-        'vill_id',
-        'dr_id',
-        'pr_id',
+        'village_id',
+        'district_id',
+        'province_id',
         'census',
         'penalty_notification',
         'certificate_residence',
@@ -62,7 +63,7 @@ class User extends Authenticatable
         'diligent_money',
         'accommodation_fee',
         'probation',
-        'account_num',
+        'account_number',
         'annotation',
     ];
 
@@ -88,47 +89,47 @@ class User extends Authenticatable
 
     public function area()
     {
-        return $this->belongsTo('App\Area');
+        return $this->belongsTo('App\Model\Area\Area');
     }
 
     public function department()
     {
-        return $this->belongsTo('App\Department');
+        return $this->belongsTo('App\Model\Department\Department');
     }
 
     public function district()
     {
-        return $this->belongsTo('App\District');
+        return $this->belongsTo('App\Model\District\District');
     }
 
     public function institution()
     {
-        return $this->belongsTo('App\Institution');
+        return $this->belongsTo('App\Model\Institution\Institution');
     }
 
     public function levelemployee()
     {
-        return $this->belongsTo('App\LevelEmployee');
+        return $this->belongsTo('App\Model\LevelEmployee\LevelEmployee');
     }
 
     public function position()
     {
-        return $this->belongsTo('App\Position');
+        return $this->belongsTo('App\Model\Position\Position');
     }
 
     public function province()
     {
-        return $this->belongsTo('App\Province');
+        return $this->belongsTo('App\Model\Province\Province');
     }
 
     public function stationed()
     {
-        return $this->belongsTo('App\Stationed');
+        return $this->belongsTo('App\Model\Stationed\Stationed');
 
     }
 
     public function village()
     {
-        return $this->belongsTo('App\Village');
+        return $this->belongsTo('App\Model\Village\Village');
     }
 }

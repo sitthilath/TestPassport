@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Stationed;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Stationed;
+use App\Model\Stationed\Stationed;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
 
 class StationedController extends Controller

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Institution;
 
-use App\Department;
+
 use App\Http\Controllers\Controller;
-use App\Institution;
+use App\Model\Institution\Institution;
 use Illuminate\Http\Request;
 
 class InstitutionController extends Controller
