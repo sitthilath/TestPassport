@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
          DB::table('users')->insert([
-             'email' => 'bbbbb@gmail.com','email_verified_at' => NULL,'password' => 'bbbbb','budget_company' => 'b','previous' => 'b','status' => 'b','card_number_employee' => 'b','name' => 'b','surname'=>'bbbb','position_id' => '1','start_date' => '2020-06-26','levelemployee_id' => '1','report_to' => 'b','line_report' => 'b','institution_id' => '1','department_id' => '1','stationed_id' => '1','area_id' => '1','date_of_birth' => '2020-06-26','tel' => 'b','history_working' => 'b','edu_background' => 'b','company_guarantee' => 'b','village_id' => '10101','district_id' => '101','province_id' => '1','census' => 'b','penalty_notification' => 'b','certificate_residence' => 'b','certificate_medical_checkup' => 'b','quick_contact_information' => 'b','basic_salary' => 'b','eating_rate' => 'b','bonus' => 'b','phone_value' => 'b','annual_holiday' => 'b','appraisal_salary' => 'b','petrol_cost' => 'b','depreciation' => 'b','diligent_money' => 'b','accommodation_fee' => 'b','probation' => 'b','account_number' => 'b','annotation' => 'b','remember_token' => NULL,'created_at' => '2020-07-16 15:54:53','updated_at' => '2020-07-16 15:54:53'
+             'email' => 'bbbbb@gmail.com','email_verified_at' => NULL,'password' => Hash::make('bbbbb'),'budget_company' => 'b','previous' => 'b','status' => 'b','card_number_employee' => 'b','name' => 'b','surname'=>'bbbb','position_id' => '1','start_date' => '2020-06-26','levelemployee_id' => '1','report_to' => 'b','line_report' => 'b','institution_id' => '1','department_id' => '1','stationed_id' => '1','area_id' => '1','date_of_birth' => '2020-06-26','tel' => 'b','history_working' => 'b','edu_background' => 'b','company_guarantee' => 'b','village_id' => '10101','district_id' => '101','province_id' => '1','census' => 'b','penalty_notification' => 'b','certificate_residence' => 'b','certificate_medical_checkup' => 'b','quick_contact_information' => 'b','basic_salary' => 'b','eating_rate' => 'b','bonus' => 'b','phone_value' => 'b','annual_holiday' => 'b','appraisal_salary' => 'b','petrol_cost' => 'b','depreciation' => 'b','diligent_money' => 'b','accommodation_fee' => 'b','probation' => 'b','account_number' => 'b','annotation' => 'b','remember_token' => NULL,'created_at' => '2020-07-16 15:54:53','updated_at' => '2020-07-16 15:54:53'
          ]);
     }
 }

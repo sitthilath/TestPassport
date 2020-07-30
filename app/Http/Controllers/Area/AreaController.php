@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\Area\Area;
 class AreaController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *

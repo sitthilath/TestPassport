@@ -24,18 +24,11 @@ Route::get('/dashboard', function(){
 });
 
 
-//crud employee
-    Route::get('/employee','EmployeeController@index')->name('employee');
-   
-    Route::post('/form.insert','EmployeeController@store');
-
-    Route::get('/insert',function(){
-        return view('dashboard.table.crudemployee.insert');
-    })->name('insert');
-
-    Route::delete('/form.del/{id}','EmployeeController@destroy');
-    Route::get('/form.edit/{id}','EmployeeController@edit');
-    Route::put('/form.update/{id}','EmployeeController@update');
-//end crud employee
 
 
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
