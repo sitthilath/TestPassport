@@ -23,21 +23,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('user','User\UserController');
 
-Route::apiResource('area','Area\AreaController')->middleware('client.credentialts');
+Route::apiResource('area','Area\AreaController');
 
-Route::apiResource('department','Department\DepartmentController')->middleware('client.credentialts');
+Route::apiResource('department','Department\DepartmentController');
 
-Route::apiResource('institution','Institution\InstitutionController')->middleware('client.credentialts');
+Route::apiResource('institution','Institution\InstitutionController');
 
-Route::apiResource('levelemployee','LevelEmployee\LevelEmployeeController')->middleware('client.credentialts');
+Route::apiResource('levelemployee','LevelEmployee\LevelEmployeeController');
 
-Route::apiResource('position','Position\PositionController')->middleware('client.credentialts');
+Route::apiResource('position','Position\PositionController');
 
-Route::apiResource('stationed','Stationed\StationedController')->middleware('client.credentialts');
+Route::apiResource('stationed','Stationed\StationedController');
 
-Route::apiResource('province','Prov_Dist_Village\ProvinceController')->middleware('client.credentialts');
+Route::apiResource('province','Prov_Dist_Village\ProvinceController');
 
-Route::apiResource('district','Prov_Dist_Village\DistrictController')->middleware('client.credentialts');
+Route::apiResource('district','Prov_Dist_Village\DistrictController');
 
-Route::apiResource('village','Prov_Dist_Village\VillageController')->middleware('client.credentialts');
+Route::apiResource('village','Prov_Dist_Village\VillageController');
 

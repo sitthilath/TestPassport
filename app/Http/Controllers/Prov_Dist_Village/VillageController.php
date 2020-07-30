@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Model\Village\Village;
 class VillageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+        $this->middleware('client.credentialts');
+    }
     /**
      * Display a listing of the resource.
      *

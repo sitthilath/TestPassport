@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Model\District\District;
 class DistrictController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+        $this->middleware('client.credentialts');
+    }
     /**
      * Display a listing of the resource.
      *

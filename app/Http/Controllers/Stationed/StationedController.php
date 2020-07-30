@@ -9,6 +9,11 @@ use Symfony\Component\HttpKernel\Event\ResponseEvent;
 
 class StationedController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+        $this->middleware('client.credentialts');
+    }
     /**
      * Display a listing of the resource.
      *
