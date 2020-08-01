@@ -10,7 +10,7 @@ class PositionController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api');
-        $this->middleware('client.credentialts');
+        $this->middleware('client.credentials');
     }
     /**
      * Display a listing of the resource.
